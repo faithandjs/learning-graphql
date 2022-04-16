@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+$rick-hair-blue: #b1d1e6;
+$rick-shirt-blue: #a4d5d7;
+$rick-shirt-white: #e8e8e8;
+$rick-bg: #e6e1c7;
+$morty-bg: #ede7c5;
+$morty-yellow: #faf989;
+$morty-brown: #ba9c7a;
+$summer-bg: #99a170;
+$summer-pink: #cf73c2;
+$summer-orange: #d08d48;
+html, body, #root{
+    height: 100%;
+}
+.main{
+    display: flex;
+    margin: auto;
+}
+.box {
+    width: 300px;
+    margin: 5px;
+    border: 1px solid black;
+    .name{
+        font: {
+            family: 'Rubik Glitch', cursive;
+            size: 28px;
+        }  
+        text-align: center;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@mixin themes ($box-name, $bg-color){
+    #{$box-name}{
+        background-color: $bg-color;
+        font-size: bold;
+    }
+}
+.box1{
+    &:hover{
+        /*background-color: $morty-yellow;*/
+        @include themes(div, $morty-yellow)
+    }
+}
+/*@include themes(#b1d1e6)*/ 
